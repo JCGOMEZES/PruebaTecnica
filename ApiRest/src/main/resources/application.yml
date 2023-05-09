@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  tomcat:
+    max-threads: 300
+spring:
+  application:
+    name: pichincha
+  data:
+    rest:
+      default-page-size: 40
+      max-page-size: 1000
+      default-media-type: application/json
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:~/test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings
+security:
+  ignored: /**
