@@ -12,7 +12,7 @@ locals {
   entity     = "The Automation Rules"
   creator    = "Terraform"
   az_prefix  = "us-east"
-  service    = "nginx"
+  service    = "imagenDocker"
   subnet_a   = "subnet-066e72b702bd0a46a"
   subnet_b   = "subnet-0125797a3800ec988"
   subnet_c   = "subnet-0248e948caf00b94a"
