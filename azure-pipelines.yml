@@ -61,3 +61,33 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Imagen/ApiRest/target'
     ArtifactName: imagen
+
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: 'Infraestructura'
+    allowTelemetryCollection: true
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'plan'
+    workingDirectory: 'Infraestructura'
+    allowTelemetryCollection: true
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'apply'
+    workingDirectory: 'Infraestructura'
+    commandOptions: '--auto-approve'
+    allowTelemetryCollection: true
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'destroy'
+    workingDirectory: 'Infraestructura'
+    commandOptions: '--auto-approve'
+    allowTelemetryCollection: true
