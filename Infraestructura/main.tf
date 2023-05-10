@@ -18,6 +18,14 @@ locals {
   subnet_c   = "subnet-0248e948caf00b94a"
   vpc_id     = "vpc-050681a9e5ead62f1"
 }
+
+block_device_mappings {
+    device_name = "/dev/sda1"
+    ebs {
+      encrypted = true
+    }
+  }
+
 # LAUNCH TEMPLATE
 resource "aws_launch_template" "asg-template-t2micro" {
   name_prefix            = "asg-${local.service}-t2micro"
