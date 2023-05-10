@@ -26,7 +26,7 @@ steps:
 - task: Maven@4
   displayName: 'Maven ApiRest/pom.xml'
   inputs:
-    mavenPomFile: '$(System.DefaultWorkingDirectory)/pichincha/pom.xml'
+    mavenPomFile: '$(System.DefaultWorkingDirectory)/ApiRest/pom.xml'
     publishJUnitResults: false
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: true
