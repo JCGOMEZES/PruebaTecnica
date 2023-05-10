@@ -62,7 +62,7 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Imagen/ApiRest/target'
     ArtifactName: imagen
 
-- task: TerraformInstaller@0
+- task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
 
