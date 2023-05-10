@@ -31,10 +31,10 @@ steps:
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: true
 
-- task: VSTest@2
-  displayName: 'VsTest - testAssemblies'
+- task: PublishTestResults@2
   inputs:
-    testAssemblyVer2: '**\*test*.java'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
 
 - task: SonarCloudPublish@1
   inputs:
