@@ -35,12 +35,12 @@ steps:
     workingDirectory: 'Infraestructura'
     allowTelemetryCollection: true
 
-- task: TerraformCLI@0
+- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-cli.TerraformCLI@0
+  displayName: 'terraform Apply'
   inputs:
-    command: 'apply'
-    workingDirectory: 'Infraestructura'
+    command: apply
+    workingDirectory: Infraestructura
     commandOptions: '--auto-approve'
-    allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
