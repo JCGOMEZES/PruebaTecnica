@@ -62,9 +62,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Imagen/ApiRest/target'
     ArtifactName: imagen
 
-- task: TerraformInstaller@1
+- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
+  displayName: 'Install Terraform'
   inputs:
-    terraformVersion: 'latest'
+    terraformVersion: $(terraformVersion)
+
 
 - task: TerraformCLI@0
   inputs:
