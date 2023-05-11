@@ -81,6 +81,7 @@ steps:
     command: 'plan'
     workingDirectory: 'Infraestructura'
     allowTelemetryCollection: true
+    publishPlanResults: 'Plan_Infraestructura_Desplegar'
 
 - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-cli.TerraformCLI@0
   displayName: 'terraform Apply'
