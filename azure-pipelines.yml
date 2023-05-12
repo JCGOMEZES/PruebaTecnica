@@ -95,4 +95,4 @@ steps:
     command: 'destroy'
     workingDirectory: 'Infraestructura'
     commandOptions: '--auto-approve'
-    allowTelemetryCollection: true
+    allowTelemetryCollection: false
